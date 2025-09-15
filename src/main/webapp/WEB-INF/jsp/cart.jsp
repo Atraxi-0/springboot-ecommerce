@@ -38,14 +38,15 @@
             </tr>
         </c:forEach>
     </table>
-    <a href="checkout">Proceed to Checkout</a>
+    <button><a href="checkout">Proceed to Checkout</a></button>
     <a href="products">
-    <button type="button">Continue Shopping</button>
+    <button type="button">Continue Shopping</button></a>
 </a>
 
 </c:if>
 <c:if test="${empty cartItems}">
     <p>Your cart is empty.</p>
+    <a href="products"><button type="button">Continue Shopping</button></a>
 </c:if>
 </body>
 </html>

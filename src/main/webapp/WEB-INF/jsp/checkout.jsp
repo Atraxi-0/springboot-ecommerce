@@ -31,7 +31,7 @@
             <td>${grandTotal}</td>
         </tr>
     </table>
-    <form action="cart34" method="post">
+    <form action="cart/clear" method="post">
         <button type="submit">Pay & Clear Cart</button>
     </form>
 

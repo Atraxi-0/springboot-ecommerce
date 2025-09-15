@@ -29,6 +29,7 @@
 </table>
 
 <br/>
-<a href="cart">View Cart</a>
+<a href="cart"><button type="button">View Cart</button></a>
+
 </body>
 </html>
