@@ -48,6 +48,31 @@ public class MarketController {
         }
     }
 
+    // Registration page
+    @GetMapping("/register")
+    public String registerPage() {
+        return "register"; // register.jsp
+    }
+
+    // Handle registration form submission
+    @PostMapping("/register")
+    public String register(@RequestParam String username,
+                           @RequestParam String password,
+                           Model model) {
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(password);
+
+        String result = userService.register(user);
+        if (result.equals("Success")) {
+            model.addAttribute("success", "Registration successful! Please login.");
+            return "login";
+        } else {
+            model.addAttribute("error", result);
+            return "register";
+        }
+    }
+
     // ===== Product listing =====
     @GetMapping("/products")
     public String showProducts(Model model, HttpSession session) {

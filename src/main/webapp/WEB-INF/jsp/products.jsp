@@ -12,7 +12,6 @@
         <th>Name</th>
         <th>Price</th>
         <th>Quantity</th>
-        <th>Action</th>
     </tr>
     <c:forEach var="product" items="${products}">
         <tr>
